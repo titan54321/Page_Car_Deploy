@@ -1,0 +1,35 @@
+<nav class="navbar">
+  <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#info">Características</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<div class="contenedor">
+  <header class="encabezado">
+    <h1>Shelby GT500</h1>
+    <p>Potencia y diseño sin comparación</p>
+    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F765823111613357556%2F&psig=AOvVaw1p7LwodwDUBWMQhrsLfAC8&ust=1748673856014000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJiInPPLyo0DFQAAAAAdAAAAABAh" alt="Shelby GT500">
+  </header>
+
+  <section id="info" class="info">
+    <h2>Características destacadas</h2>
+    <ul>
+      <li>Motor V8 supercargado de 5.2 litros</li>
+      <li>760 caballos de fuerza</li>
+      <li>0 a 100 km/h en 3.5 segundos</li>
+      <li>Diseño agresivo y aerodinámico</li>
+    </ul>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <form [formGroup]="contactoForm" (ngSubmit)="enviarFormulario()">
+      <input type="text" placeholder="Nombre" formControlName="nombre" />
+      <input type="email" placeholder="Correo electrónico" formControlName="correo" />
+      <textarea placeholder="Mensaje" formControlName="mensaje"></textarea>
+      <button type="submit" [disabled]="contactoForm.invalid">Enviar</button>
+    </form>
+  </section>
+</div>
