@@ -24,6 +24,9 @@ jobs:
       - name: Build Angular project
         run: npm run build -- --configuration=production
 
+      - name: Add fallback 404.html
+        run: cp dist/final_nico/index.html dist/final_nico/404.html
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
